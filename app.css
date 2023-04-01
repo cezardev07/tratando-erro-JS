@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 body{
     position: relative;
@@ -33,7 +34,6 @@ span{
     color: white;
     background: #ffffff14;
     padding: 20px;
-    font-family: Cascadia Code;
     position: absolute;
     top: 20px;
     animation: span 1s linear;
