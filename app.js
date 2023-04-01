@@ -6,11 +6,13 @@ const App = function(){
 
     const get = async function(){
         try {
-            const res = await fetch("./backend/api.json")
-            //const data = await res.json()
+            //const res = await fetch("./backend/FakeApi.json")
+            //forçando um possivel "erro"!👆⤴️
+            const data = await res.json() 
 
             return data
-        } catch (error) {
+        } catch (error) { 
+            // 🛠️ tratando um possivel "erro", e mostrando para o usuario! ⤵️🔃
             console.log(error)
 
             const span = document.createElement("span")
@@ -34,16 +36,16 @@ const App = function(){
         const data = await get()
         console.log(data)
 
-        if(bolleanError === false){
-            const removeLoad = document.querySelector(".cont-spinne")
-                removeLoad.remove()
-        }
-
         const HelloWorld = document.createElement("h1")
             
             HelloWorld.innerHTML = data[0].title
         
         body.appendChild(HelloWorld)
+
+        if(bolleanError === false){
+            const removeLoad = document.querySelector(".cont-spinne")
+                removeLoad.remove()
+        }
     }
 
     return user()
