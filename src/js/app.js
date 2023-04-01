@@ -1,6 +1,6 @@
 const body = document.querySelector("body")
 
-let bolleanError = false
+let booleanError = false
 
 const App = function(){
 
@@ -28,7 +28,7 @@ const App = function(){
             contSpinne.appendChild(span)
             contSpinne.appendChild(spinne)
 
-            bolleanError = true
+            booleanError = true
         }
     }
 
@@ -42,7 +42,7 @@ const App = function(){
         
         body.appendChild(HelloWorld)
 
-        if(bolleanError === false){
+        if(booleanError === false){
             const removeLoad = document.querySelector(".cont-spinne")
                 removeLoad.remove()
         }
